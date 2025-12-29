@@ -1,0 +1,17 @@
+# Godot engine cache
+.godot/
+.import/
+
+# Exported files
+.export/
+.export_presets.cfg
+
+# Mono / C# (如果以后用)
+.mono/
+
+# Editor / OS junk
+.vscode/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
