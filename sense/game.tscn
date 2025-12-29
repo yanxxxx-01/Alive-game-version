@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://c3v1oqinjnpdd"]
+
+[ext_resource type="Texture2D" uid="uid://dkxltlod16j1d" path="res://asset/tbj2_sprites_16x16_V4_transp_4-1.png" id="1_hl3e1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pckuu"]
+atlas = ExtResource("1_hl3e1")
+region = Rect2(0, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54ito"]
+atlas = ExtResource("1_hl3e1")
+region = Rect2(64, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxmnm"]
+atlas = ExtResource("1_hl3e1")
+region = Rect2(128, 512, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtb4v"]
+atlas = ExtResource("1_hl3e1")
+region = Rect2(192, 512, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_me7w0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pckuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ito")
+}],
+"loop": true,
+"name": &"idel",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxmnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtb4v")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 4.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(40, 44)
+sprite_frames = SubResource("SpriteFrames_me7w0")
+animation = &"idel"
+autoplay = "idel"
+frame_progress = 0.1830175
